@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <div id="infogr-wrap-090223-desktop">
-        <h2>IP Blocking and Monitoring Process</h2>
-        <div class="thumb svg1">
+    <div id="infogr-chart-090223">
+        <h2 id="mainTitle100223">IP Blocking and Monitoring Process</h2>
+        <div class="thumb100223 svg1">
             <h3>1</h3>
-            <h2>Your IP has been infringed
+            <h2>Your IP has<br />been infringed
             </h2>
             <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 65.92 66.918" style="enable-background:new 0 0 65.92 66.918;" xml:space="preserve">
@@ -29,7 +29,7 @@
             </svg>
             <p>Content Owners</p>
         </div>
-        <div class="thumb svg2">
+        <div class="thumb100223 svg2">
             <h3>2</h3>
             <h2>Request<br />Submitted
             </h2>
@@ -59,7 +59,7 @@
             </svg>
             <p>NAGRA Infringement Monitoring</p>
         </div>
-        <div class="thumb svg3">
+        <div class="thumb100223 svg3">
             <h3>3</h3>
             <h2>Request Reviewed<br />&amp; Validated</h2>
             <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -106,7 +106,7 @@
             </svg>
             <p>Industry Regulator(s)</p>
         </div>
-        <div class="thumb svg4">
+        <div class="thumb100223 svg4">
             <h3>4</h3>
             <h2>Request Executed<br />(DNS & IP Blocking)</h2>
             <!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -147,9 +147,9 @@
             </svg>
             <p>Internet Service Providers</p>
         </div>
-        <div class="thumb svg5">
+        <div class="thumb100223 svg5">
             <h3>5</h3>
-            <h2>Block Validation &amp; Results Capture</h2>
+            <h2>Block Validation &amp;<br />Results Capture</h2>
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 65.283 65.283" style="enable-background:new 0 0 65.283 65.283;" xml:space="preserve">
                <g>
                   <path  class="path" style="fill:none;stroke:#003B65;stroke-width:1.5701;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
@@ -163,7 +163,34 @@
             <p>NAGRA Validation</p>
         </div>
     </div>
-    <script></script>
+    <script>
+        // scroll to
+
+        // scroll trigger boxes and inside svgs 
+        const animations = document.querySelectorAll('.thumb100223');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('start');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        animations.forEach(animation => {
+            observer.observe(animation);
+        });
+
+        //scroll trigger main title
+        const animation3 = document.getElementById('mainTitle100223');
+
+        const observer3 = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                animation3.classList.add('start');
+                observer3.unobserve(animation3);
+            }
+        });
+        observer3.observe(animation3);
+    </script>
 </body>
 
 </html>

@@ -30,8 +30,8 @@ $border-magenta: #cf3b7b;
     }
 }
 
-#infogr-wrap-090223-desktop {
-    margin: 0 auto 36px auto;
+#infogr-chart-090223 {
+    margin: 0 auto 48px auto;
     position: relative;
     display: flex;
     width: 100%;
@@ -57,25 +57,32 @@ $border-magenta: #cf3b7b;
         color: $dark-blue;
         text-align: center;
         font-size: 20px;
+        line-height: 24px;
         text-transform: uppercase;
         width: 100%;
         display: block;
-        margin: 36px auto 96px auto;
+        margin: 18px auto;
         position: relative;
-        animation: 0.5s ease-out 0s 1 fadeIn;
-        animation-delay: 0.6s;
-        animation-fill-mode: forwards;
         opacity: 0;
+        &.start {
+            animation: 0.5s ease-out 0s 1 fadeIn;
+            animation-delay: 0.3s;
+            animation-fill-mode: forwards;
+        }
+        @media (min-width: 767px) {
+            margin: 36px auto 54px auto;
+        }
     }
-    .thumb {
+    .thumb100223 {
         border: 2px solid $border-blue;
         border-radius: 6px;
-        width: 212px;
+        width: 100%;
         height: 202px;
         position: relative;
         margin: 20px;
         @media (min-width: 480px) {
             margin-top: 20px;
+            width: 212px;
         }
         @media (min-width: 940px) {
             margin-top: 20px;
@@ -83,34 +90,13 @@ $border-magenta: #cf3b7b;
         @media (min-width: 1216px) {
             margin-top: 0;
         }
-        &:after {
-            content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
-            color: #cf3b7b;
-            position: absolute;
-            right: 94px;
-            top: 189px;
-            width: 26px;
-            height: 26px;
-            rotate: 90deg;
-            opacity: 0;
-            animation: 1s ease-out 0s 1 slideInFromTop;
-            animation-delay: 6s;
-            animation-fill-mode: forwards;
-            @media (min-width: 542px) {
-                right: -36px;
-                top: 97px;
-                width: 26px;
-                height: 26px;
-                rotate: 0deg;
-            }
-        }
         &:last-child {
             &:after {
                 content: "";
                 color: #cf3b7b;
                 position: absolute;
                 right: -36px;
-                top: 97px;
+                top: 86px;
                 width: 26px;
                 height: 26px;
             }
@@ -129,7 +115,10 @@ $border-magenta: #cf3b7b;
             width: 30px;
             height: 30px;
             position: absolute;
-            left: 90px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
             top: -36px;
         }
         h2 {
@@ -139,6 +128,7 @@ $border-magenta: #cf3b7b;
             color: $dark-blue;
             text-align: center;
             font-size: 15px;
+            line-height: 18px;
             text-transform: uppercase;
             width: 100%;
             display: block;
@@ -153,6 +143,7 @@ $border-magenta: #cf3b7b;
             font-family: Helvetica, Sans-Serif;
             color: $dark-blue;
             font-size: 12px;
+            line-height: 12px;
             text-align: center;
             margin: 11px 0px 5px 0px;
         }
@@ -162,87 +153,209 @@ $border-magenta: #cf3b7b;
             transition: all 0.2s ease-in;
         }
         &.svg1 {
-            animation: 0.3s ease-out 0s 1 slideInFromTop;
-            animation-delay: 1s;
-            animation-fill-mode: forwards;
             opacity: 0;
-            svg {
-                height: 52px;
-                width: 52px;
-                .path {
-                    stroke-dasharray: 198;
-                    stroke-dashoffset: 592;
-                    animation: dash 0.8s linear;
+            &.start {
+                animation: 0.3s ease-out 0s 1 slideInFromTop;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+                &:after {
+                    content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    color: #cf3b7b;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 189px;
+                    width: 26px;
+                    height: 26px;
+                    rotate: 90deg;
+                    opacity: 0;
+                    animation: 1s ease-out 0s 1 slideInFromTop;
+                    animation-delay: 5s;
                     animation-fill-mode: forwards;
-                    animation-delay: 1s;
+                    @media (min-width: 527px) {
+                        right: -36px;
+                        top: 86px;
+                        width: 26px;
+                        height: 26px;
+                        rotate: 0deg;
+                        left: auto;
+                        right: -36px;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    height: 52px;
+                    width: 52px;
+                    .path {
+                        stroke-dasharray: 198;
+                        stroke-dashoffset: 592;
+                        animation: dash 0.8s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 1s;
+                    }
                 }
             }
         }
         &.svg2 {
-            animation: 0.3s ease-out 0s 1 slideInFromTop;
-            animation-delay: 2s;
-            animation-fill-mode: forwards;
             opacity: 0;
-            svg {
-                height: 53px;
-                width: 54px;
-                .path {
-                    stroke-dasharray: 178;
-                    stroke-dashoffset: 592;
-                    animation: dash 0.8s linear;
+            &.start {
+                animation: 0.3s ease-out 0s 1 slideInFromTop;
+                animation-delay: 2s;
+                animation-fill-mode: forwards;
+                &:after {
+                    content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    color: #cf3b7b;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 189px;
+                    width: 26px;
+                    height: 26px;
+                    rotate: 90deg;
+                    opacity: 0;
+                    animation: 1s ease-out 0s 1 slideInFromTop;
+                    animation-delay: 5.5s;
                     animation-fill-mode: forwards;
-                    animation-delay: 2s;
+                    @media (min-width: 527px) {
+                        right: -36px;
+                        top: 86px;
+                        width: 26px;
+                        height: 26px;
+                        rotate: 0deg;
+                        left: auto;
+                        right: -36px;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    height: 53px;
+                    width: 54px;
+                    .path {
+                        stroke-dasharray: 178;
+                        stroke-dashoffset: 592;
+                        animation: dash 0.8s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 2s;
+                    }
                 }
             }
         }
         &.svg3 {
-            animation: 0.3s ease-out 0s 1 slideInFromTop;
-            animation-delay: 3s;
-            animation-fill-mode: forwards;
             opacity: 0;
-            svg {
-                height: 52px;
-                width: 52px;
-                .path {
-                    stroke-dasharray: 178;
-                    stroke-dashoffset: 592;
-                    animation: dash 0.8s linear;
+            &.start {
+                animation: 0.3s ease-out 0s 1 slideInFromTop;
+                animation-delay: 3s;
+                animation-fill-mode: forwards;
+                &:after {
+                    content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    color: #cf3b7b;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 189px;
+                    width: 26px;
+                    height: 26px;
+                    rotate: 90deg;
+                    opacity: 0;
+                    animation: 1s ease-out 0s 1 slideInFromTop;
+                    animation-delay: 6s;
                     animation-fill-mode: forwards;
-                    animation-delay: 3s;
+                    @media (min-width: 527px) {
+                        right: -36px;
+                        top: 86px;
+                        width: 26px;
+                        height: 26px;
+                        rotate: 0deg;
+                        left: auto;
+                        right: -36px;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    height: 52px;
+                    width: 52px;
+                    .path {
+                        stroke-dasharray: 178;
+                        stroke-dashoffset: 592;
+                        animation: dash 0.8s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 3s;
+                    }
                 }
             }
         }
         &.svg4 {
-            animation: 0.3s ease-out 0s 1 slideInFromTop;
-            animation-delay: 4s;
-            animation-fill-mode: forwards;
             opacity: 0;
-            svg {
-                height: 53px;
-                width: 54px;
-                .path {
-                    stroke-dasharray: 178;
-                    stroke-dashoffset: 592;
-                    animation: dash 0.8s linear;
+            &.start {
+                animation: 0.3s ease-out 0s 1 slideInFromTop;
+                animation-delay: 4s;
+                animation-fill-mode: forwards;
+                &:after {
+                    content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    color: #cf3b7b;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    top: 189px;
+                    width: 26px;
+                    height: 26px;
+                    rotate: 90deg;
+                    opacity: 0;
+                    animation: 1s ease-out 0s 1 slideInFromTop;
+                    animation-delay: 6.5s;
                     animation-fill-mode: forwards;
-                    animation-delay: 4s;
+                    @media (min-width: 527px) {
+                        right: -36px;
+                        top: 86px;
+                        width: 26px;
+                        height: 26px;
+                        rotate: 0deg;
+                        left: auto;
+                        right: -36px;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                svg {
+                    height: 53px;
+                    width: 54px;
+                    .path {
+                        stroke-dasharray: 178;
+                        stroke-dashoffset: 592;
+                        animation: dash 0.8s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 4s;
+                    }
                 }
             }
         }
         &.svg5 {
-            animation: 0.3s ease-out 0s 1 slideInFromTop;
-            animation-delay: 5s;
-            animation-fill-mode: forwards;
             opacity: 0;
-            svg {
-                height: 52px;
-                width: 46px;
-                .path {
-                    stroke-dasharray: 197;
-                    stroke-dashoffset: 592;
-                    animation: dash 0.8s linear;
-                    animation-fill-mode: forwards;
-                    animation-delay: 5s;
+            &.start {
+                animation: 0.3s ease-out 0s 1 slideInFromTop;
+                animation-delay: 5s;
+                animation-fill-mode: forwards;
+                svg {
+                    height: 52px;
+                    width: 46px;
+                    .path {
+                        stroke-dasharray: 197;
+                        stroke-dashoffset: 592;
+                        animation: dash 0.8s linear;
+                        animation-fill-mode: forwards;
+                        animation-delay: 5s;
+                    }
                 }
             }
         }
