@@ -28,12 +28,6 @@ $border-magenta: #cf3b7b;
         stroke-dasharray: 223;
         stroke-dashoffset: 892;
     }
-} //anim svg
-@keyframes dash {
-    to {
-        stroke-dasharray: 223;
-        stroke-dashoffset: 892;
-    }
 }
 
 #infogr-wrap-090223-desktop {
@@ -76,13 +70,12 @@ $border-magenta: #cf3b7b;
     .thumb {
         border: 2px solid $border-blue;
         border-radius: 6px;
-        width: 50%;
+        width: 212px;
         height: 202px;
         position: relative;
         margin: 20px;
         @media (min-width: 480px) {
             margin-top: 20px;
-            width: 212px;
         }
         @media (min-width: 940px) {
             margin-top: 20px;
@@ -94,10 +87,22 @@ $border-magenta: #cf3b7b;
             content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
             color: #cf3b7b;
             position: absolute;
-            right: -36px;
-            top: 97px;
+            right: 94px;
+            top: 189px;
             width: 26px;
             height: 26px;
+            rotate: 90deg;
+            opacity: 0;
+            animation: 1s ease-out 0s 1 slideInFromTop;
+            animation-delay: 6s;
+            animation-fill-mode: forwards;
+            @media (min-width: 542px) {
+                right: -36px;
+                top: 97px;
+                width: 26px;
+                height: 26px;
+                rotate: 0deg;
+            }
         }
         &:last-child {
             &:after {

@@ -1,13 +1,3 @@
-@-webkit-keyframes slideInFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 @keyframes slideInFromTop {
   0% {
     opacity: 0;
@@ -18,32 +8,12 @@
     transform: translateY(0);
   }
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes dash {
-  to {
-    stroke-dasharray: 223;
-    stroke-dashoffset: 892;
-  }
-}
-@keyframes dash {
-  to {
-    stroke-dasharray: 223;
-    stroke-dashoffset: 892;
   }
 }
 @keyframes dash {
@@ -62,12 +32,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  -webkit-animation: 0.5s ease-out 0s 1 fadeIn;
-          animation: 0.5s ease-out 0s 1 fadeIn;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.5s ease-out 0s 1 fadeIn;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 @media (min-width: 767px) {
@@ -92,18 +59,15 @@
   display: block;
   margin: 36px auto 96px auto;
   position: relative;
-  -webkit-animation: 0.5s ease-out 0s 1 fadeIn;
-          animation: 0.5s ease-out 0s 1 fadeIn;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.5s ease-out 0s 1 fadeIn;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb {
   border: 2px solid #2393d1;
   border-radius: 6px;
-  width: 50%;
+  width: 212px;
   height: 202px;
   position: relative;
   margin: 20px;
@@ -111,7 +75,6 @@
 @media (min-width: 480px) {
   #infogr-wrap-090223-desktop .thumb {
     margin-top: 20px;
-    width: 212px;
   }
 }
 @media (min-width: 940px) {
@@ -128,10 +91,24 @@
   content: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 34.823 34.689' style='enable-background:new 0 0 34.823 34.689;' xml:space='preserve'%3E%3Cg%3E%3Cpolyline style='fill:%235EBBE5;' points='17.598,34.689 34.823,16.304 17.598,0.033 '/%3E%3Crect style='fill:%235EBBE5;' width='17.593' height='34.681'/%3E%3C/g%3E%3C/svg%3E%0A");
   color: #cf3b7b;
   position: absolute;
-  right: -36px;
-  top: 97px;
+  right: 94px;
+  top: 189px;
   width: 26px;
   height: 26px;
+  rotate: 90deg;
+  opacity: 0;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 542px) {
+  #infogr-wrap-090223-desktop .thumb:after {
+    right: -36px;
+    top: 97px;
+    width: 26px;
+    height: 26px;
+    rotate: 0deg;
+  }
 }
 #infogr-wrap-090223-desktop .thumb:last-child:after {
   content: "";
@@ -171,12 +148,9 @@
   display: block;
   margin: 32px auto 0 auto;
   position: relative;
-  -webkit-animation: 0.5s ease-out 0s 1 fadeIn;
-          animation: 0.5s ease-out 0s 1 fadeIn;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.5s ease-out 0s 1 fadeIn;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb p {
@@ -192,12 +166,9 @@
   transition: all 0.2s ease-in;
 }
 #infogr-wrap-090223-desktop .thumb.svg1 {
-  -webkit-animation: 0.3s ease-out 0s 1 slideInFromTop;
-          animation: 0.3s ease-out 0s 1 slideInFromTop;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.3s ease-out 0s 1 slideInFromTop;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb.svg1 svg {
@@ -207,20 +178,14 @@
 #infogr-wrap-090223-desktop .thumb.svg1 svg .path {
   stroke-dasharray: 198;
   stroke-dashoffset: 592;
-  -webkit-animation: dash 0.8s linear;
-          animation: dash 0.8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: dash 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 #infogr-wrap-090223-desktop .thumb.svg2 {
-  -webkit-animation: 0.3s ease-out 0s 1 slideInFromTop;
-          animation: 0.3s ease-out 0s 1 slideInFromTop;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.3s ease-out 0s 1 slideInFromTop;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb.svg2 svg {
@@ -230,20 +195,14 @@
 #infogr-wrap-090223-desktop .thumb.svg2 svg .path {
   stroke-dasharray: 178;
   stroke-dashoffset: 592;
-  -webkit-animation: dash 0.8s linear;
-          animation: dash 0.8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: dash 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
 #infogr-wrap-090223-desktop .thumb.svg3 {
-  -webkit-animation: 0.3s ease-out 0s 1 slideInFromTop;
-          animation: 0.3s ease-out 0s 1 slideInFromTop;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.3s ease-out 0s 1 slideInFromTop;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb.svg3 svg {
@@ -253,20 +212,14 @@
 #infogr-wrap-090223-desktop .thumb.svg3 svg .path {
   stroke-dasharray: 178;
   stroke-dashoffset: 592;
-  -webkit-animation: dash 0.8s linear;
-          animation: dash 0.8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation: dash 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
 #infogr-wrap-090223-desktop .thumb.svg4 {
-  -webkit-animation: 0.3s ease-out 0s 1 slideInFromTop;
-          animation: 0.3s ease-out 0s 1 slideInFromTop;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.3s ease-out 0s 1 slideInFromTop;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb.svg4 svg {
@@ -276,20 +229,14 @@
 #infogr-wrap-090223-desktop .thumb.svg4 svg .path {
   stroke-dasharray: 178;
   stroke-dashoffset: 592;
-  -webkit-animation: dash 0.8s linear;
-          animation: dash 0.8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation: dash 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
 }
 #infogr-wrap-090223-desktop .thumb.svg5 {
-  -webkit-animation: 0.3s ease-out 0s 1 slideInFromTop;
-          animation: 0.3s ease-out 0s 1 slideInFromTop;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: 0.3s ease-out 0s 1 slideInFromTop;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 #infogr-wrap-090223-desktop .thumb.svg5 svg {
@@ -299,10 +246,7 @@
 #infogr-wrap-090223-desktop .thumb.svg5 svg .path {
   stroke-dasharray: 197;
   stroke-dashoffset: 592;
-  -webkit-animation: dash 0.8s linear;
-          animation: dash 0.8s linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  animation: dash 0.8s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
 }/*# sourceMappingURL=infogr-080223.css.map */
